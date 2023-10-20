@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>css</title>
+        <meta charset="utf-8"/>
+        <style>
+            body{color: antiquewhite;}
+            div{
+                color: blue;
+                color: #d8d8d8;
+                color: rgb(100%, 30%, 60%);
+                color: rgb(180, 174, 118);
+            }
+            /*css 주석*/
+        </style>
+        <!--html 주석-->
+        <div class="cascade"> 단계적으로 적용되는 스타일 </div>
+        <div class="cascade" id="specifi"> 단계적으로 적용되는 스타일 </div>
+        <div class="cascade" id="specifi" style="color:lightskyblue;"> 단계적으로 적용되는 스타일 </div>
+    </head>
+    <body>
+        <div id="d1">상속</div>
+        <style>
+            div{
+                background-color: cadetblue;
+            border: solid 1px black;
+        }
+        #d2{
+            width: 100px;
+            height: 150px;
+        }
+        </style>
+        <div id="d2">width height</div>
+
+        <style>
+            #d3{
+                padding: 30px;
+            }
+        </style>
+        <div id="d3">padding</div>
+        <div id="d4">margin</div>
+        <style>
+            *{
+                text-decoration: underline;
+            }
+            strong{color:rgb(100%, 30%, 60%);}
+                em{color:aqua;}
+        </style>
+        <strong>strong</strong>
+        <em>em</em>
+        <strong>strong2</strong>
+        <style>
+            .c1{font-size: 30px;}
+            #i1{font-size: 90px;}
+        </style>
+        <div class="c1">class selector</div>
+        <div id="i1">id selector</div>
+
+        <style>
+            #d5::first-line{
+                color: aqua;
+            }
+            #d5::first-letter{
+               font-size: :50px;
+            }
+            #b5::before{content:"시작";}
+            #b5::after{content:"끝";}
+        </style>
+        <div id="d5">
+            안녕하세요 first line, 안녕하세요 first line, first letter,안녕하세요 first line, 안녕하세요 first line, first letter,
+            안녕하세요 first line, 안녕하세요 first line, first letter,안녕하세요 first line, 안녕하세요 first line, first letter,
+        </div>
+    </body>
+</html>
